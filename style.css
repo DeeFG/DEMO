@@ -1,0 +1,41 @@
+html{
+    
+}
+
+
+header{
+background: goldenrod;
+
+}
+
+#direct{
+background: turquoise;
+}
+
+#timer{
+background: red;
+
+
+}
+#cont{
+    background: gray;
+}
+
+#box1{
+    
+    background:green;
+
+}
+.card-body{ 
+    background: blueviolet;
+    border: 8px solid black;
+    margin: 0 auto;
+}
+#box2{
+    background: pink;
+    
+}
+
+footer{
+    background:blue;
+}
