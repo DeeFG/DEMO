@@ -15,16 +15,21 @@ background: turquoise;
 #timer{
 background: red;
 
-
 }
+.btn.btn-dark{
+    background: palegreen;
+}
+
+.btn.btn-dark:hover {
+    background: yellow;
+}
+
 #cont{
     background: gray;
 }
 
 #box1{
-    
     background:green;
-
 }
 .card-body{ 
     background: blueviolet;
@@ -33,7 +38,6 @@ background: red;
 }
 #box2{
     background: pink;
-    
 }
 
 footer{
