@@ -1,25 +1,59 @@
-// var questions = [];
-// var answers = [];
+
+
 var score = 0;
 var totalscore = 0;
-var winnerPhoto= "";
-var losePhoto= "";
-var wins = 0;
-var loss = 0;
+var winnerPhoto = "";
+var losePhoto = "";
+var plus = 0;
+var answers = [];
+var minus = 0;
+var choices = [];
+var answer = undefined;
+
+
+var questions = [
+    {
+        question: "What is the capital of United Kingdom?",
+        choices: ["Manchester", "Birmingham", "London", "Birmingham"],
+        answer: 2
+    },
+
+    {
+        question: "What is the capital of United States?",
+        choices: ["California", "New York", "Miami", "Florida"],
+        answer: 1
+    },
+
+    {
+        question: "What is color is the sun",
+        choices: ["red", "yellow", "blue"],
+        answer: 2
+    }
+];
 
 
 
-    // on click to click answer question
-    $(".btn") .click(function() {
-        $( ".btn" ).click();
-        console.log("log");
+$("button").click(function () {
+    
+console.log(" ");
+
+})
+
+for (var i = 0; i < questions.length; i++) {
+    console.log(questions);
+
+}
+for(var i =0; i < choices.length; i++){
+    console.log("choices");
+
+}
+
         // when click on the anwer
 
         //check to see if anwer is a match to the question
         //anwer === question loop??? 
         // if/ else statment
         // if == true/macth --> DO SOEMTHING
-    });
 
 
     //     function score() {
@@ -34,10 +68,13 @@ var loss = 0;
     //         console.log("checkAnwer")
     //     }
 
-    //     functino reset(){
-    //         console.log("reset")
-    //     }
-    //     function changeQues() {
+        // functino reset(){
+        //     console.log("reset")
+        //     new question
+        //     new answer
+        // }
+
+        // function changeQues() {
 
     //     }
 
