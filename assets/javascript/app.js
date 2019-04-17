@@ -1,5 +1,3 @@
-
-
 var score = 0;
 var totalscore = 0;
 var winnerPhoto = "";
@@ -7,7 +5,7 @@ var losePhoto = "";
 var plus = 0;
 var answers = [];
 var minus = 0;
-var choices = [];
+//var choices = [];
 var answer = undefined;
 
 
@@ -26,32 +24,48 @@ var questions = [
 
     {
         question: "What is color is the sun",
-        choices: ["red", "yellow", "blue"],
+        choices: ["red", "yellow", "blue","violet"],
         answer: 2
     }
 ];
 
+$(document).ready(function () {
+    console.log("ready!");
 
+    $("button").click(function () {
+        console.log("hello");
+    })
 
-$("button").click(function () {
+   
+    for (var i = 0; i < questions.length; i++) {
+        console.log(questions[i].question);
+        $("#box1").text(questions[i].question);}
     
-console.log(" ");
+            for (var j = 0; j < questions.length; j++) {
+                console.log(questions[j].choices);
+                $("button").text(questions[j].choices);
+        }
 
-})
+        // for (var k = 0; k < question.length; k++) {
+        //    console.log(question); }
+    //         //$("button").text(questions[k].choices[k].length);
+        //}
+       
 
-for (var i = 0; i < questions.length; i++) {
-    console.log(questions);
+    //     
 
-}
-for(var i =0; i < choices.length; i++){
-    console.log("choices");
+    //     }
+    // }
 
-}
+    // var timer = setInterval(function () {
+    //     if (questions === questions.length) {
+    //         clearTimeout(timer);
+    //     }
+    // }, 1000);
 
-        // when click on the anwer
+});
 
-        //check to see if anwer is a match to the question
-        //anwer === question loop??? 
+
         // if/ else statment
         // if == true/macth --> DO SOEMTHING
 
@@ -82,11 +96,7 @@ for(var i =0; i < choices.length; i++){
 
     //     }
 
-// $("btn.btn-dark:hover").click(function() {
-//     $( this ).slideUp();
-//   });
 
-//   $( " ).hover(function() {
-//     $( this ).fadeOut( 100 );
-//     $( this ).fadeIn( 500 );
-//   });
+
+
+
