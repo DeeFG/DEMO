@@ -17,7 +17,7 @@ var button = $("<button>");
 var questions = [
     {
         question: "What is the capital of United Kingdom?",
-        choices: ["Manchester", "Birmingham", "London", "Birmingham"],
+        choices: ["Manchester", "Birmingham", "London", "Glasglow"],
         answer: 2
     },
 
@@ -100,28 +100,38 @@ $(document).ready(function () {
         console.log("hello");
 
     })
+    function newBnt() {
+        var newBtn = $("<button>");
+        $(newBtn).text("clck me");
+        newBtn.appendTo(button);
+
+    }
 
     for (var i = 0; i < questions.length; i++) {
-
         // SHOW------ Questions
         console.log(questions[i].question);
         $("#box1").text(questions[i].question); // rotate questions
 
-
         // SHOW--CHOICES 
-        console.log(questions[i].choices);
-        button.text(questions[i].cjoices);
+        for (var j = 0; j < questions[j].choices[j].length ; j++) {
+            console.log(questions[i].choices[j]);
+            $("#option1").text(questions[i].choices[j]);
+            // $("button").text(questions[i].choices[1])
+            // $("button").text(questions[i].choices[2])
+            // $("button").text(questions[i].choices[3])
+
+            for (var k = 0; k < questions[k].answer.length; k++) {
+                /////// --- MATCH ANWERS
+                console.log(questions[i].answer);
+            }
 
 
-        /////// --- MATCH ANWERS
-        $("button").val(questions[i].choices);
-        console.log(questions[i].answer);
+            //-------CHANGE QUESTION AND ANWER
+            // function changeQues() { }
+            // function changeAnsw() {}
 
 
-        //-------CHANGE QUESTION AND ANWER
-        // function changeQues() { }
-        // function changeAnsw() {}
-
+        }
 
     }
 
