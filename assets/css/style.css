@@ -3,9 +3,10 @@ html{
 }
 
 #hidebutton{
-    
+    background:orange;
+    color: white;
 }
-
+ 
 header{
 background: goldenrod;
 
