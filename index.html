@@ -9,27 +9,29 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+
     <title>Trivia</title>
-</head>  
+</head>
 
 <body>
     <div class="row">
         <div class="col-md-12">
-            <header> TOPIC</header>
+            <header class="sticky-top"> TRIVIA</header>
         </div>
     </div>
 
     <container>
-        <div ><button id="hidebutton" onclick="startGame()">START</button></div>
+        <div><button id="start" onclick="startGame()">START</button></div>
         <div class="row">
-            <div class="col-md-9" id="direct">Instructions</div>
-            <div class="col-md-3" id="timer">timer</div>
-            
+            <div class="col-md-9" id="direct">You have five minutes to complete the questions.</div>
+            <div class="col-md-3">TIME:<span id="timer"></span> </div>
+
         </div>
         <div class="row">
-            <div class="col-md-12" id="cont">Contains two boxes
+            <!-- <div class="col-md-12" id="cont">Contains two boxes -->
                 <div class="row">
-                    <div class=col-md-6 class="card-body" id="box1"> box1
+                    <div class=col-md-5 class="card-body" id="box1"> box1
                         <div class="card">
                             <div class="card-body">
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -41,20 +43,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class=col-md-6>
+                    <div class=col-md-5>
                         <div class="col-md-12" id="box2"> box2
                             <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option" value=""></button></div>
+                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option0"
+                                        value=""></button></div>
                             </div>
 
                             <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option" value=""></button></div>
+                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option1"
+                                        value=""></button></div>
                             </div>
                             <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option" value=""></button></div>
+                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option2"
+                                        value=""></button></div>
                             </div>
                             <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option" value=""></button></div>
+                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option3"
+                                        value=""></button></div>
                             </div>
                         </div>
                     </div>
@@ -65,7 +71,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <footer>DEEFG</footer>
+                <footer class="fixed-bottom">DEEFG</footer>
             </div>
         </div>
 
@@ -73,7 +79,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script = src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

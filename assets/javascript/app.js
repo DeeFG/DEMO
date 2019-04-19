@@ -2,84 +2,90 @@
 ///set the timer for the game
 /// how to change pages for each question
 
-
-
-
 var score = 0;
 var totalscore = 0;
 var winnerPhoto = "";
 var losePhoto = "";
 var points = 0;
 //var totalQuestions = questions.length;
-var button = $("<button>");
 var userSelect = undefined;
+var countdown;
+var timer;
+var index = 0;
 
 
 var questions = [
     {
-        question: "What is the capital of United Kingdom?",
-        choices: ["Manchester", "Birmingham", "London", "Glasglow"],
-        answer: 2
+        question: "Which of the following is the longest venomous snakes in Africa?",
+        choices: ["Black racer", "Red-bellied black snake", "Balck rat snake", "Black mamba"],
+        answer: 3
     },
     {
-        question: "What is the capital of United States?",
-        choices: ["California", "New York", "Miami", "Florida"],
+        question: "What fossil fuel is often referred to as black gold?",
+        choices: ["Natural Gas", "Diamond", "Coal", "Oil"],
+        answer: 3
+    },
+
+    {
+        question: "Which one of these words are not associated with blackmail?",
+        choices: ["shakedown", "artlessness", "extortion", "fruad"],
         answer: 1
     },
 
     {
-        question: "What is color is the sun",
-        choices: ["red", "yellow", "blue", "violet"],
-        answer: 2
+        question: "Which one of these is not a 'black widow'?",
+        choices: ["A woman who has killed her husband", "A spider", "A way of bribing someone", "A movie title"],
+        answer: 1
+    },
+
+    {
+        question: "Where is the Black Sea?",
+        choices: ["In Southeast Asia, near Thailand", "In Africa", "The La Brea Tar Pits", "Between Europe and Asia"],
+        answer: 3
+    },
+
+    {
+        question: "What is the 'black death'?",
+        choices: ["Indie Rock group", "Bubonic Plague", "Ancient pagan religion", "Bug Spray"],
+        answer: 1
+    },
+
+    {
+        question: "In 1896, the C.H. Black Manufacturing Company in Indianapolis, Indiana, began producing which of the following products?",
+        choices: ["Submarine", "Automobiles", "Helicopeters", "Dirigibles"],
+        answer: 1
     }
 ];
 
+$(document).on("click", "#start", function () {
+    $("#start").hide();
+    console.log("START")
+    
+});
+
 $("button").click(function () {
-        var text = $( this ).text();
-            $( "input" ).val( text );
-        console.log("hello");
-    });
+    var val = +$(this).val();
+    console.log(val);
+if (questions[currentQues].answer === val){
+console.log("correct")
+}
 
+});
 
+var currentQues = 0;
 $(document).ready(function () {
     console.log("ready!");
 
+    // SHOW------ Questions
+    console.log(questions[currentQues].question);
+    $("#box1").text(questions[currentQues].question); // rotate questions
 
-
-    function newBnt() {
-        var newBtn = $("<button>");
-        $(newBtn).text("clck me");
-        newBtn.appendTo(button);
-
+    // SHOW--CHOICES 
+    for (var j = 0; j < questions[currentQues].choices.length; j++) {
+        console.log(questions[currentQues].choices[j]);
+        $("#option" + j).val(j); // rotate questions
+        $("#option" + j).text(questions[currentQues].choices[j]);
     }
-
-    for (var i = 0; i < questions.length; i++) {
-        // SHOW------ Questions
-        console.log(questions[i].question);
-        $("#box1").text(questions[i].question); // rotate questions
-
-        // SHOW--CHOICES 
-        for (var j = 0; j < questions[i].choices[j].length; j++) {
-            console.log(questions[i].choices[j]);
-            $("#option").val(questions[i].choices[j]); // rotate questions
-           $("button").text(questions[i].choices[j]);
-           //newbtn.text(questions[i].choices[j]);
-          // ("#option1").append(newbtn);
-
-
-
-            for (var k = 0; k < questions[i].answer[k]; k++) {
-                /////// --- MATCH ANWERS
-                console.log(questions[i].answer[k]);
-            }
-            //-------CHANGE QUESTION AND ANWER
-            // function changeQues() { }
-            // function changeAnsw() {}
-
-        }
-
-    }
-
 });
 
 //--------START GAME-----

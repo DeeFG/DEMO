@@ -1,8 +1,18 @@
 html{
+    background:url("/Users/dee/CODE/TriviaGame1/assets/tallyblack.jpg"); 
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    border: 2px solid black;
+}
+body{
     
 }
 
-#hidebutton{
+#start{
     background:orange;
     color: white;
 }
@@ -11,7 +21,11 @@ header{
 background: goldenrod;
 
 }
+container {
+    background: yellow;
+}
 
+.container
 #direct{
 background: turquoise;
 }
@@ -21,29 +35,47 @@ background: red;
 
 }
 .btn.btn-dark{
-    background: palegreen;
+    background:black;
+
+    width: 100%;
+    
 }
 
 .btn.btn-dark:hover {
-    background: yellow;
-}
-
-#cont{
     background: gray;
 }
 
+#cont{
+    background:
+
+}
+
 #box1{
-    background:green;
+    background: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    border: 5px solid white; 
+    border-radius: 5px;
+    
+}
+
+#box2{
+    background: black;
+    color: wheat;
+    font-size: 30px;
+    text-align: center center;
+    border: 5px solid white; 
+    border-radius: 5px;
+    
 }
 .card-body{ 
     background: blueviolet;
     border: 8px solid black;
     margin: 0 auto;
 }
-#box2{
-    background: pink;
-}
-
 footer{
-    background:blue;
+    background:rgb(7, 7, 7);
+    color: white;
+
 }
