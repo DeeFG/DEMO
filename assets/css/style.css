@@ -1,17 +1,14 @@
 html{
-text-align: center;
+
 }
 body{
     background:url("/Users/dee/CODE/TriviaGame1/assets/fliptally.png"); 
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     height: 100%;
     width: 100%;
     background-size: cover;
-    overflow: hidden;
     font-family: 'Pangolin', cursive;
-
-    
 }
 
 #start{
@@ -20,12 +17,9 @@ body{
     text-align: center;
 }
  
-.sticky-top{
- 
+.top{
     color: white;
-    Height: 50px;
     font-size: 70px;
-  
 
 }
 container {
@@ -46,14 +40,14 @@ container {
 }
 
 #timer{
-background: white;
-border: red solid 5px;
+background:black;
+border: white solid 1px;
+color: white;
+font-weight: 200;
 font-size: 20px;
-margin-right: 70px;
+width: 50%;
 
-}
-#timerem{
-    color:white;
+
 }
 
 .btn.btn-dark{
@@ -61,13 +55,14 @@ margin-right: 70px;
     font-size: 30px;
     width: 100%;
     height: 100%;
-    
+    margin-left: 40px;
 }
 
 .btn.btn-dark:hover {
     background: gray;
     width: 100%;
     height: 100%;
+    
 }
 
 
@@ -81,11 +76,9 @@ margin-right: 70px;
     
    
 }
-.row{
-    margin-left: 50px;
-}
 
-.cont {
+#cont {
+    margin: 60px;
 
 }
 #box2{
@@ -104,7 +97,7 @@ margin-right: 70px;
     border: 8px solid black;
     
 }
-footer{
+.fixed-bottom{
     background:rgb(7, 7, 7);
     color: white;
     border-top: 8px rgb(45, 42, 42);

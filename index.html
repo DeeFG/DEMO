@@ -15,72 +15,84 @@
 </head>
 
 <body>
-    <center> 
     <div class="row">
-        <div class="col-md-12">
-            <div class="sticky-top" class="glow"> All   Black   Everything   Trivia</div>
-        </div>
-    </div>
-    <br><br>
-    <div id="start"  class="alert alert-dark" role="alert">
+        <div class=col-md-12 id="start" class="alert alert-dark" role="alert">
             <h4 class="alert-heading">WELCOME</h4>
             <p> you have a 5 seconds to answer each question. </p>
             <hr>
-            <p class="mb-0"><div><button onclick="startGame()">START</button></div>When you are ready press the start button ! </p>
-          </div>
-    
-    <container class="container-fluid">
-        <div class="row">
-            <div class="col-md-9" id="direct">You have five minutes to complete the questions.</div>
-            <br><br><br>
-            <div class="col-md-2">TIME:</div>
-            <div class="col-md-1"><span id="timer"></span> </div>
+            <p class="mb-0">
+                <div><button>START</button></div>When you are ready press the start button!
+            </p>
         </div>
-        <div class="row" id="cont">
+    </div>
+    <container class="container-fluid">
+        <center>
             <div class="row">
-                <div class=col-md-1></div>
+                <div class="col-md-12">
+                    <h1>
+                        <div class="top"> All Black Everything Trivia </div>
+                    </h1>
+                </div>
             </div>
+            <br>
+
+<div id="showhide">
+
             <div class="row">
-                <div class=col-md-5 class="card-body" id="box1">
-                    <div class="card">
-                        <div class="card-body">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                <div class="col-md-12" id="timer"> </div>
+            </div>
+            <br>
+            <div class="row" id="cont">
+                <div class="row">
+                    <div class=col-md-1></div>
+                </div>
+                <div class="row">
+                    <div class=col-md-5 class="card-body" id="box1">
+                        <div class="card">
+                            <div class="card-body">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class=col-md-1></div>
-                <div class="col-md-5" id="box2"> CHOICES <br>
 
-                    <div class="row">
-                        <div><button type="button" class="btn btn-dark" id="option0" value=""></button></div>
-                    </div>
 
-                    <div class="row">
-                        <div><button type="button" class="btn btn-dark" id="option1" value=""></button></div>
+                    <div class=col-md-1> </div>
+                    <div class="col-md-5" id="box2"> CHOICES <br>
+
+                        <div class="row">
+                            <div><button type="button" class="btn btn-dark" id="option0" value=""></button></div>
+                        </div>
+
+                        <div class="row">
+                            <div><button type="button" class="btn btn-dark" id="option1" value=""></button></div>
+                        </div>
+                        <div class="row">
+                            <div><button type="button" class="btn btn-dark" id="option2" value=""></button></div>
+                        </div>
+                        <div class="row">
+                            <div><button type="button" class="btn btn-dark" id="option3" value=""></button></div>
+                        </div>
+                        <br>
                     </div>
-                    <div class="row">
-                        <div><button type="button" class="btn btn-dark" id="option2" value=""></button></div>
-                    </div>
-                    <div class="row">
-                        <div><button type="button" class="btn btn-dark" id="option3" value=""></button></div>
-                    </div>
-                    <br>
                 </div>
             </div>
         </div>
 
-        </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <footer class="fixed-bottom"> &copy; DeeFG</footer>
-            </div>
-        </div>
+            <p align="center">
+                <img src="assets/happy.png" id="happy" style="visibility: hidden;" />
+                <img src="assets/sad.png" id="sad" style="visibility: hidden;" />
+            </p>
 
+
+            <div class="row">
+                <div class="col-md-12">
+                    <footer class="fixed-bottom"> &copy; DeeFG</footer>
+                </div>
+            </div>
+        </center>
     </container>
 
-</center>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>

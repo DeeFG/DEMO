@@ -1,11 +1,11 @@
-/// link a val.  value to a new button
-///set the timer for the game
+
+///stop the timer for the game
 /// how to change pages for each question
 
 var score = 0;
 var totalscore = 0;
-var winnerPhoto = "";
-var losePhoto = "";
+var happyPhoto = document.getElementById("assets/happy.png");
+var sadPhoto = document.getElementById("assets/sad.png");
 var points = 0;
 //var totalQuestions = questions.length;
 var userSelect = undefined;
@@ -13,27 +13,27 @@ var countdown;
 var timer;
 var index = 0;
 
-
+var currentQues = 0;
 var questions = [
+
     {
-        question: "Which of the following is the longest venomous snakes in Africa?",
-        choices: ["Black racer", "Red-bellied black snake", "Balck rat snake", "Black mamba"],
-        answer: 3
-    },
-    {
-        question: " The song All Black Everything by Lupe Fiaco debut on whic of his albums",
+        question: " The song All Black Everything by Lupe Fiasco debut on which of his albums",
         choices: ["The Blueprint", "Lasers", "Dragas Light", "Black Notes"],
         answer: 1
     },
     {
-        question: "What fossil fuel is often referred to as black gold?",
-        choices: ["Natural Gas", "Diamond", "Coal", "Oil"],
+        question: "Which of the following is the longest venomous snakes in Africa?",
+        choices: ["Black Racer", "Red-bellied Black Snake", "Balck Rat Snake", "Black Mamba"],
         answer: 3
     },
-
+    {
+        question: "What fossil fuel is often referred to as black gold?",
+        choices: ["Natural Gas", "Diamonds", "Coal", "Oil"],
+        answer: 3
+    },
     {
         question: "Which one of these words are not associated with blackmail?",
-        choices: ["shakedown", "artlessness", "extortion", "fruad"],
+        choices: ["Shakedown", "Artlessness", "Extortion", "Fruad"],
         answer: 1
     },
 
@@ -54,7 +54,8 @@ var questions = [
         choices: ["Indie Rock group", "Bubonic Plague", "Ancient pagan religion", "Bug Spray"],
         answer: 1
     },
-    {   question: "In the 2018 film Black Panther, Over 25,000 cubic feet of foam was used in the Warrior Falls set to replicate which african waterfall? ",
+    {
+        question: "In the 2018 film Black Panther, Over 25,000 cubic feet of foam was used in the Warrior Falls set to replicate which african waterfall? ",
         choices: ["Victoria Falls", "Sipi Falls", "Oribi Gorge", "Kalambo Falls"],
         answer: 2
     }
@@ -65,22 +66,43 @@ var questions = [
 $(document).on("click", "#start", function () {
     $("#start").hide();
     console.log("START")
-    
+
 });
+
+function showHappyImage() {
+    var winnerPhoto = document.getElementById("assets/happy.png");
+    $("#happy").show();
+    console.log("happy")
+}
+
+function showSadImage() {
+    var sadPhoto = document.getElementById("assets/sad.png");
+    $("#sad").show();
+    console.log("sad");
+
+}
+
 
 $("button").click(function () {
     var val = +$(this).val();
     console.log(val);
-if (questions[currentQues].answer === val){
-console.log("correct")
-}
+
+    if (questions[currentQues].answer === val) {
+        points++;
+        showHappyImage();
+        console.log("correct");
+    } else {
+        showSadImage();
+        console.log("nope");
+    }
+    startTimer();
 
 });
 
-var currentQues = 0;
+
+
 $(document).ready(function () {
     console.log("ready!");
-
     // SHOW------ Questions
     console.log(questions[currentQues].question);
     $("#box1").text(questions[currentQues].question); // rotate questions
@@ -98,10 +120,10 @@ $(document).ready(function () {
 
 // ----------SET SCOREING RULES
 function checkCorrectAnswer() {
-    var numIndex = questions[i].answer;
+    var val = questions[i].answer;
 
     // if answer is correct
-    if (userSelects === numIndex) {
+    if (event === val) {
         // add to the number of correct answers
         points++;
 
@@ -116,12 +138,6 @@ function checkCorrectAnswer() {
 }
 
 
-//----------RESET
-// functino reset(){
-//     console.log("reset")
-//     new question
-//     new answer
-// }
 
 
 // ------- funtions -------
@@ -131,29 +147,34 @@ function startTimer(duration, display) {
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        display.textContent = "TIME: " + minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
+        if (--timer === 0) {
+            clearInterval(timer);
         }
     }, 1000);
 }
 
+function Stoptime() {
+    clearInterval(tumer);
+}
+
+
 window.onload = function () {
-    // var fiveMinutes = 60 * 5,
-    //     display = document.querySelector('#timer');
-    // startTimer(fiveMinutes, display);
+   $("#start").show(); 
+    $("#showhide").hide();
 
     $(document).on("click", "#start", function () {
         $("#start").hide();
-        console.log("START")
-        
+        $("#showhide").show();
+
+        var fifteensec = 15,
+            display = document.querySelector('#timer');
+        startTimer(fifteensec, display);
     });
-
-
 };
+
 // cancel timer-------------
