@@ -21,6 +21,11 @@ var questions = [
         answer: 3
     },
     {
+        question: " The song All Black Everything by Lupe Fiaco debut on whic of his albums",
+        choices: ["The Blueprint", "Lasers", "Dragas Light", "Black Notes"],
+        answer: 1
+    },
+    {
         question: "What fossil fuel is often referred to as black gold?",
         choices: ["Natural Gas", "Diamond", "Coal", "Oil"],
         answer: 3
@@ -49,12 +54,12 @@ var questions = [
         choices: ["Indie Rock group", "Bubonic Plague", "Ancient pagan religion", "Bug Spray"],
         answer: 1
     },
-
-    {
-        question: "In 1896, the C.H. Black Manufacturing Company in Indianapolis, Indiana, began producing which of the following products?",
-        choices: ["Submarine", "Automobiles", "Helicopeters", "Dirigibles"],
-        answer: 1
+    {   question: "In the 2018 film Black Panther, Over 25,000 cubic feet of foam was used in the Warrior Falls set to replicate which african waterfall? ",
+        choices: ["Victoria Falls", "Sipi Falls", "Oribi Gorge", "Kalambo Falls"],
+        answer: 2
     }
+
+
 ];
 
 $(document).on("click", "#start", function () {
@@ -139,8 +144,16 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#timer');
-    startTimer(fiveMinutes, display);
+    // var fiveMinutes = 60 * 5,
+    //     display = document.querySelector('#timer');
+    // startTimer(fiveMinutes, display);
+
+    $(document).on("click", "#start", function () {
+        $("#start").hide();
+        console.log("START")
+        
+    });
+
+
 };
 // cancel timer-------------

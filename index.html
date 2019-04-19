@@ -9,77 +9,81 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pangolin|Rock+Salt" rel="stylesheet">
 
     <title>Trivia</title>
 </head>
 
 <body>
+    <center> 
     <div class="row">
         <div class="col-md-12">
-            <header class="sticky-top"> TRIVIA</header>
+            <div class="sticky-top" class="glow"> All   Black   Everything   Trivia</div>
         </div>
     </div>
-
-    <container>
-        <div><button id="start" onclick="startGame()">START</button></div>
+    <br><br>
+    <div id="start"  class="alert alert-dark" role="alert">
+            <h4 class="alert-heading">WELCOME</h4>
+            <p> you have a 5 seconds to answer each question. </p>
+            <hr>
+            <p class="mb-0"><div><button onclick="startGame()">START</button></div>When you are ready press the start button ! </p>
+          </div>
+    
+    <container class="container-fluid">
         <div class="row">
             <div class="col-md-9" id="direct">You have five minutes to complete the questions.</div>
-            <div class="col-md-3">TIME:<span id="timer"></span> </div>
-
+            <br><br><br>
+            <div class="col-md-2">TIME:</div>
+            <div class="col-md-1"><span id="timer"></span> </div>
         </div>
-        <div class="row">
-            <!-- <div class="col-md-12" id="cont">Contains two boxes -->
-                <div class="row">
-                    <div class=col-md-5 class="card-body" id="box1"> box1
-                        <div class="card">
-                            <div class="card-body">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim id est laborum."
-                            </div>
-                        </div>
-                    </div>
-                    <div class=col-md-5>
-                        <div class="col-md-12" id="box2"> box2
-                            <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option0"
-                                        value=""></button></div>
-                            </div>
-
-                            <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option1"
-                                        value=""></button></div>
-                            </div>
-                            <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option2"
-                                        value=""></button></div>
-                            </div>
-                            <div class="row">
-                                <div class=col-md-3><button type="button" class="btn btn-dark" id="option3"
-                                        value=""></button></div>
-                            </div>
+        <div class="row" id="cont">
+            <div class="row">
+                <div class=col-md-1></div>
+            </div>
+            <div class="row">
+                <div class=col-md-5 class="card-body" id="box1">
+                    <div class="card">
+                        <div class="card-body">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
                         </div>
                     </div>
                 </div>
+                <div class=col-md-1></div>
+                <div class="col-md-5" id="box2"> CHOICES <br>
+
+                    <div class="row">
+                        <div><button type="button" class="btn btn-dark" id="option0" value=""></button></div>
+                    </div>
+
+                    <div class="row">
+                        <div><button type="button" class="btn btn-dark" id="option1" value=""></button></div>
+                    </div>
+                    <div class="row">
+                        <div><button type="button" class="btn btn-dark" id="option2" value=""></button></div>
+                    </div>
+                    <div class="row">
+                        <div><button type="button" class="btn btn-dark" id="option3" value=""></button></div>
+                    </div>
+                    <br>
+                </div>
             </div>
+        </div>
+
         </div>
         </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <footer class="fixed-bottom">DEEFG</footer>
+                <footer class="fixed-bottom"> &copy; DeeFG</footer>
             </div>
         </div>
 
     </container>
 
-
+</center>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </body>
+</center>
 
 </html>
