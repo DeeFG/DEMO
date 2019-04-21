@@ -1,13 +1,4 @@
 
-///stop the timer for the game
-/// how to change pages for each question
-
-var score = 0;
-var totalscore = 0;
-var happyPhoto = document.getElementById("assets/happy.png");
-var sadPhoto = document.getElementById("assets/sad.png");
-var points = 0;
-//var totalQuestions = questions.length;
 var userSelect = undefined;
 var countdown;
 var timer;
@@ -63,118 +54,157 @@ var questions = [
 
 ];
 
-$(document).on("click", "#start", function () {
-    $("#start").hide();
-    console.log("START")
+var choices = ["Lasers", "Black Mamba", "Oil", "Oribi Gorge", "Bubonic Plague", "Spider", "Between Europe and Asia", "Sikorsky Aircraft", "It is a Visa Card", "#000000"]
 
-});
-
-function showHappyImage() {
-    var winnerPhoto = document.getElementById("assets/happy.png");
-    $("#happy").show();
-    console.log("happy")
-}
-
-function showSadImage() {
-    var sadPhoto = document.getElementById("assets/sad.png");
-    $("#sad").show();
-    console.log("sad");
-
-}
+var choiceQ1 = $('input[name="choiceQ1"]:checked').val();
+var choiceQ2 = $('input[name="choiceQ2"]:checked').val();
+var choiceQ3 = $('input[name="choiceQ3"]:checked').val();
+var choiceQ4 = $('input[name="choiceQ4"]:checked').val();
+var choiceQ5 = $('input[name="choiceQ5"]:checked').val();
+var choiceQ6 = $('input[name="choiceQ6"]:checked').val();
+var choiceQ7 = $('input[name="choiceQ7"]:checked').val();
+var choiceQ8 = $('input[name="choiceQ8"]:checked').val();
+var choiceQ9 = $('input[name="choiceQ9"]:checked').val();
+var choiceQ10 = $('input[name="choiceQ10"]:checked').val();
 
 
-$("button").click(function () {
-    var val = +$(this).val();
-    console.log(val);
+var points = 0;
 
-    if (questions[currentQues].answer === val) {
-        points++;
-        showHappyImage();
-        console.log("correct");
-    } else {
-        showSadImage();
-        console.log("nope");
-    }
-    startTimer();
-
-});
-
-
-
-$(document).ready(function () {
-    console.log("ready!");
-    // SHOW------ Questions
-    console.log(questions[currentQues].question);
-    $("#box1").text(questions[currentQues].question); // rotate questions
-
-    // SHOW--CHOICES 
-    for (var j = 0; j < questions[currentQues].choices.length; j++) {
-        console.log(questions[currentQues].choices[j]);
-        $("#option" + j).val(j); // rotate questions
-        $("#option" + j).text(questions[currentQues].choices[j]);
-    }
-});
-
-//--------START GAME-----
-
-
-// ----------SET SCOREING RULES
-function checkCorrectAnswer() {
-    var val = questions[i].answer;
-
-    // if answer is correct
-    if (event === val) {
-        // add to the number of correct answers
-        points++;
-
-        // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
-    }
-    // if answer is wrong or blank
-    else {
-        // color the answers red
-        answerContainers[questionNumber].style.color = 'red';
-    }
-}
-
-
-
-
-// ------- funtions -------
-///--------ADD TIMER FUNCTION
-function startTimer(duration, display) {
+function startTimer(duration) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var timerID = setInterval(function () {
+        if (--timer < 0) {
+            clearInterval(timerID);
+            return;
+        }
+
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = "TIME: " + minutes + ":" + seconds;
-
-        if (--timer === 0) {
-            clearInterval(timer);
-        }
     }, 1000);
 }
 
-function Stoptime() {
-    clearInterval(tumer);
-}
+
 
 
 window.onload = function () {
-   $("#start").show(); 
+    $("#start").show();
     $("#showhide").hide();
 
     $(document).on("click", "#start", function () {
         $("#start").hide();
         $("#showhide").show();
 
-        var fifteensec = 15,
-            display = document.querySelector('#timer');
-        startTimer(fifteensec, display);
+        var fifteensec = 180;
+        display = document.querySelector('#timer');
+        startTimer(fifteensec);
     });
 };
 
-// cancel timer-------------
+$(document).ready(function () {
+
+    $(document).ready(function () {
+        $('#btnGetValue').click(function () {
+            var choiceQ1 = $('input[name="choiceQ1"]:checked').val();
+            console.log(choiceQ1)
+
+            var choiceQ2 = $('input[name="choiceQ2"]:checked').val();
+            console.log(choiceQ2)
+
+            var choiceQ3 = $('input[name="choiceQ3"]:checked').val();
+            console.log(choiceQ3)
+
+            var choiceQ4 = $('input[name="choiceQ4"]:checked').val();
+            console.log(choiceQ4)
+
+            var choiceQ5 = $('input[name="choiceQ5"]:checked').val();
+            console.log(choiceQ5)
+
+            var choiceQ6 = $('input[name="choiceQ6"]:checked').val();
+            console.log(choiceQ6)
+
+            var choiceQ7 = $('input[name="choiceQ7"]:checked').val();
+            console.log(choiceQ7)
+            var choiceQ8 = $('input[name="choiceQ8"]:checked').val();
+            console.log(choiceQ8)
+
+            var choiceQ9 = $('input[name="choiceQ9"]:checked').val();
+            console.log(choiceQ9)
+
+            var choiceQ10 = $('input[name="choiceQ10"]:checked').val();
+            console.log(choiceQ10);
+
+            // $('p').html('<br/>Selected Radio Button Value is : <b>' + selValue + '</b>');
+
+
+            for (var i = 0; i < choices.length; i++) {
+
+                if (choiceQ1 === choices[i]) {
+                    points++;
+                    console.log("correct")
+                }
+                if (choiceQ2 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ3 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ4 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ5 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ6 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ7 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ8 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ9 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                if (choiceQ10 === choices[i]) {
+                    points++;
+                    console.log(1)
+                }
+                console.log("done");
+            }
+            $("#score").html("You scored " + points + " out of 10");
+        });
+    });
+
+
+});
+
+
+
+    //});
+
+
+
+    // ------- funtions -------
+    ///--------ADD TIMER FUNCT
+
+
+
+
+
+
+
+// });
+

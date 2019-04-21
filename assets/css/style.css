@@ -2,7 +2,7 @@ html{
 
 }
 body{
-    background:url("/Users/dee/CODE/TriviaGame1/assets/fliptally.png"); 
+    background:url("images/fliptally.png"); 
     background-size: cover;
     background-repeat:repeat;
     height: 100%;
@@ -46,8 +46,6 @@ color: white;
 font-weight: 200;
 font-size: 20px;
 width: 50%;
-
-
 }
 
 .btn.btn-dark{
@@ -57,6 +55,7 @@ width: 50%;
     height: 100%;
     margin-left: 40px;
 }
+
 
 .btn.btn-dark:hover {
     background: gray;
@@ -76,10 +75,19 @@ width: 50%;
     
    
 }
-
+#showhide{
+  
+}
 #cont {
-    margin: 60px;
+    margin: 100px;
+    color:white;
+    font-size: 20px;
 
+}
+#score{
+
+    font-size: 60px;
+    color: red;
 }
 #box2{
     background: black;
