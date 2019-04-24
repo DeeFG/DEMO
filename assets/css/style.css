@@ -1,9 +1,6 @@
-html{
-    background:black; 
 
-}
 body{
-    background:url("images/fliptally.png"); 
+    background:url("/images/fliptally.png"); 
     background-size: cover;
     background-repeat:repeat;
     height: 100%;
