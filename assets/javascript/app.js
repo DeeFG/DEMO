@@ -54,7 +54,7 @@ var questions = [
 
 ];
 
-var choices = ["Lasers", "Black Mamba", "Oil", "Oribi Gorge", "Bubonic Plague", "Spider", "Between Europe and Asia", "Sikorsky Aircraft", "It is a Visa Card", "#000000"]
+var choices = ["Lasers", "Black Mamba", "Oil", "Oribi Gorge", "Bubonic Plague", "Spider", "Between Europe and Asia", "Sikorsky Aircraft", "It is a Visa Card", "000000"]
 
 var choiceQ1 = $('input[name="choiceQ1"]:checked').val();
 var choiceQ2 = $('input[name="choiceQ2"]:checked').val();
@@ -184,7 +184,7 @@ $(document).ready(function () {
                 }
                 console.log("done");
             }
-            $("#score").html("You scored " + points + " out of 10");
+            $("#score").html("You scored " + points + " Out of " +  choices.length);
         });
     });
 
