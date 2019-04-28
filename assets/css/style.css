@@ -1,14 +1,14 @@
 html{
-
+    background:url("./images/fliptally.png"); 
+   
+    
 }
 body{
-    background:url("images/fliptally.png"); 
-    background-size: cover;
+    background:url("./images/fliptally.png"); 
     background-repeat:repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
+   
     font-family: 'Pangolin', cursive;
+    background-size: 100% auto;
 }
 
 #start{
